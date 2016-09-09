@@ -2,20 +2,20 @@
 using System.Collections;
 using UnityEngine.UI;
 public class Player : MonoBehaviour {
-	public Image starImage;
-	public Sprite iconStar;
-	public Sprite iconNoStar;
-	private bool carryingStar = false;
+	public Text starText;
+	private int totalStars = 0;
+	void Start(){
+		UpdateStarText();
+	}
 	void OnTriggerEnter2D(Collider2D hit){
 		if(hit.CompareTag("Star")){
-			carryingStar = true;
-			UpdateStarImage();
+			totalStars++;
+			UpdateStarText();
 			Destroy(hit.gameObject);
-		} }
-	private void UpdateStarImage(){
-		if(carryingStar)
-			starImage.sprite = iconStar;
-		else
-			starImage.sprite = iconNoStar;
+		} 
 	}
+	private void UpdateStarText(){
+		string starMessage = "stars = " + totalStars;
+		starText.text = starMessage;
+	} 
 }
