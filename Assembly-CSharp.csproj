@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\SpaceGirlMiniGame\Scripts\Player.cs" />
-     <Compile Include="Assets\SpaceGirlMiniGame\Scripts\PlayerInventory.cs" />
      <Compile Include="Assets\SpaceGirlMiniGame\Scripts\PlayerInventoryDisplay.cs" />
      <Compile Include="Assets\SpaceGirlMiniGame\Scripts\PlayerMove.cs" />
      <None Include="Assets\SpaceGirlMiniGame\Sprites\SpaceCute PNG\sources.txt" />
