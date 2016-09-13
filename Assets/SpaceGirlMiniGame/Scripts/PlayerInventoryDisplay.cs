@@ -3,15 +3,9 @@ using System.Collections;
 using UnityEngine.UI;
 public class PlayerInventoryDisplay : MonoBehaviour
 {
-	public Image[] starPlaceholders;
-		public Sprite iconStarYellow;
-	public Sprite iconStarGrey;
+	public Image iconStarsYellow;
 	public void OnChangeStarTotal(int starTotal){
-		for (int i = 0;i < starPlaceholders.Length; ++i){
-			if (i < starTotal)
-				starPlaceholders[i].sprite = iconStarYellow;
-			else
-				starPlaceholders[i].sprite = iconStarGrey;
-		}
-	} 
+		float newWidth = 100 * starTotal;
+		iconStarsYellow.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, newWidth);
+	}
 }
