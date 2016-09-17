@@ -3,17 +3,14 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 public class Player : MonoBehaviour {
-	private PlayerInventoryDisplay playerInventoryDisplay;
-	private List<PickUp> inventory = new List<PickUp>();
+	private InventoryManager inventoryManager;
 	void Start(){
-		playerInventoryDisplay = GetComponent<PlayerInventoryDisplay>();
-		playerInventoryDisplay.OnChangeInventory(inventory);
+		inventoryManager = GetComponent<InventoryManager>();
 	}
 	void OnTriggerEnter2D(Collider2D hit){
 		if(hit.CompareTag("Pickup")){
 			PickUp item = hit.GetComponent<PickUp>();
-			inventory.Add( item );
-			playerInventoryDisplay.OnChangeInventory(inventory);
+			inventoryManager.Add( item );
 			Destroy(hit.gameObject);
 		} 
 	}
