@@ -45,10 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\SpaceGirlMiniGame\Scripts\InventoryManager.cs" />
-     <Compile Include="Assets\SpaceGirlMiniGame\Scripts\PickUp.cs" />
+     <Compile Include="Assets\SpaceGirlMiniGame\Scripts\PickupUI.cs" />
      <Compile Include="Assets\SpaceGirlMiniGame\Scripts\Player.cs" />
      <Compile Include="Assets\SpaceGirlMiniGame\Scripts\PlayerInventoryDisplay.cs" />
+     <Compile Include="Assets\SpaceGirlMiniGame\Scripts\PlayerInventoryModel.cs" />
      <Compile Include="Assets\SpaceGirlMiniGame\Scripts\PlayerMove.cs" />
      <None Include="Assets\SpaceGirlMiniGame\Sprites\SpaceCute PNG\sources.txt" />
  <Reference Include="UnityEngine.Networking">

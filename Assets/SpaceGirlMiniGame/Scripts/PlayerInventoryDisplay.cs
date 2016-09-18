@@ -1,21 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using System.Collections.Generic;
-public class PlayerInventoryDisplay : MonoBehaviour {
-	public Text inventoryText;
-	private string newInventoryText;
-	public void OnChangeInventory(Dictionary<PickUp.PickUpType, int>
-		inventory){
-		inventoryText.text = "";
-		newInventoryText = "carrying: ";
-		int numItems = inventory.Count;
-		foreach(var item in inventory){
-			int itemTotal = item.Value;
-			string description = item.Key.ToString();
-			newInventoryText += " [ " + description + " " + itemTotal +
-				" ]"; }
-		if(numItems < 1) newInventoryText = "(empty inventory)";
-		inventoryText.text = newInventoryText;
-	}
+public class PlayerInventoryDisplay : MonoBehaviour
+{
+	const int NUM_INVENTORY_SLOTS = 10;
+	public PickupUI[] slots = new PickupUI[NUM_INVENTORY_SLOTS];
+	public void OnChangeStarTotal(int starTotal){
+		for(int i = 0; i < NUM_INVENTORY_SLOTS; i++){
+			PickupUI slot = slots[i];
+			if(i < starTotal)
+				slot.DisplayYellow();
+			else
+				slot.DisplayGrey();
+		}
+	} 
 }

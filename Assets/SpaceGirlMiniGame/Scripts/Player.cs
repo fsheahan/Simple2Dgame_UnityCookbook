@@ -1,17 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using System.Collections.Generic;
 public class Player : MonoBehaviour {
-	private InventoryManager inventoryManager;
+	private PlayerInventoryModel playerInventoryModel;
 	void Start(){
-		inventoryManager = GetComponent<InventoryManager>();
+		playerInventoryModel = GetComponent<PlayerInventoryModel>();
 	}
 	void OnTriggerEnter2D(Collider2D hit){
-		if(hit.CompareTag("Pickup")){
-			PickUp item = hit.GetComponent<PickUp>();
-			inventoryManager.Add( item );
+		if(hit.CompareTag("Star")){
+			playerInventoryModel.AddStar();
 			Destroy(hit.gameObject);
-		} 
-	}
+		}
+	} 
 }
