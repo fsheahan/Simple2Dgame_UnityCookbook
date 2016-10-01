@@ -51,7 +51,6 @@
      <Compile Include="Assets\SpaceGirlMiniGame\Scripts\PlayerInventoryDisplay.cs" />
      <Compile Include="Assets\SpaceGirlMiniGame\Scripts\PlayerInventoryModel.cs" />
      <Compile Include="Assets\SpaceGirlMiniGame\Scripts\PlayerMove.cs" />
-     <Compile Include="Assets\chapter3\Scripts\BugFlip.cs" />
      <None Include="Assets\SpaceGirlMiniGame\Sprites\SpaceCute PNG\sources.txt" />
      <None Include="Assets\PotatoMan2DAssets\Sprites\sources.txt" />
  <Reference Include="UnityEngine.UI">
