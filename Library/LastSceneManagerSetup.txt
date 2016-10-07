@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/BeanMan.unity
+- path: Assets/SpaceGirlMiniGame/Scenes/Scene1.unity
   isLoaded: 1
   isActive: 1
